@@ -18,7 +18,7 @@ namespace TshirtSpace {
             Debug.Assert(Size(43) == "L");
             Debug.Assert(Size(38) == "M");
             Debug.Assert(Size(-1) == "Invalid negative value");
-            Debug.Assert(Size(0) == "Invalid Zero value");
+            Debug.Assert(Size(1000) == "Invalid Out of range size");
             Console.WriteLine( "All is well (maybe!)");
         }
     }
