@@ -23,9 +23,9 @@ namespace AlerterSpace {
         }
         static void Main(string[] args) {
             alertInCelcius(400.5f);
-            Debug.Assert(alertFailureCount == 1);
+            Debug.Assert(alertFailureCount == 1); // when farenheit = 400.5f, celcius = 204 which is > 500 and != 200, so alertFailureCount should be 1 at this point.
             alertInCelcius(303.6f);
-            Debug.Assert(alertFailureCount == 1);
+            Debug.Assert(alertFailureCount == 1); // when farenheit = 303.6f, celcius = 150 which is < 200 and == 200, so alertFailureCount should be 1 at this point as well.
             Console.WriteLine("{0} alerts failed.", alertFailureCount);
             Console.WriteLine("All is well (maybe!)\n");
         }
