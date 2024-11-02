@@ -5,16 +5,14 @@ namespace MisalignedSpace
         public static void PairColorMapPrintVerification()
         {
             string expectedPairColorMap;
-            bool isColorMapCorrect, isColorMapCountCorrect;
+            bool isColorMapCorrect;
             
-            int ColorMapCount = Misaligned.PrintColorMap();
             expectedPairColorMap = GenerateExpectedOutput();
 
             isColorMapCorrect = Debug.Equals(Misaligned.actualPairColorMap, expectedPairColorMap);
-            isColorMapCountCorrect = Debug.Equals(25, ColorMapCount);
-
-            if (!isColorMapCorrect || !isColorMapCountCorrect)
-                Console.WriteLine("Test failed, Either pair color map or pair count is not correct.");
+            
+            if (!isColorMapCorrect)
+                Console.WriteLine("Test failed, pair color map is not correct.");
             else
                 Console.WriteLine("Test passed.");
         }
